@@ -1,0 +1,19 @@
+.main {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+
+  > .list {
+    > .sort {
+      margin-bottom: 20px;
+    }
+  }
+
+  > :first-child {
+    width: 232px;
+  }
+
+  > :last-child {
+    width: 502px;
+  }
+}

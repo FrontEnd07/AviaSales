@@ -1,0 +1,67 @@
+.main {
+  background: #fff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+
+  > .title {
+    padding: 20px 10px 10px 10px;
+
+    > h1 {
+      margin: 0;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 12px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+  }
+
+  > .CheckboxList {
+    > :hover {
+      background: #F1FCFF;
+    }
+
+    > label {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      padding: 10px 0 10px 10px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 20px;
+      color: #4A4A4A;
+
+      > span {
+        margin-left: 10px;
+      }
+
+      input[type=checkbox] {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+
+      input[type=checkbox]:before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: red;
+      }
+
+      input[type=checkbox]:checked:before {
+        background: green;
+      }
+
+      > input[type=checkbox]:before {
+        background: url("./../../../assets/CheckboxNull.png") #fff;
+      }
+
+      > input[type=checkbox]:checked:before {
+        background: url("./../../../assets/Checkbox.png") #fff;
+      }
+    }
+  }
+}
