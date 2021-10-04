@@ -28,10 +28,10 @@ const List = () => {
     useEffect(() => {
         if (filter.length > 0) {
             let arr = [];
-            listTickets.slice(0, page).filter((el, key) => {
+            list?.tickets?.filter((el) => {
                 return el.segments.filter(stops => {
                     return filter.forEach(val => {
-                        if (stops.stops.length === val) {
+                        if (val !== 5 && stops.stops.length === val) {
                             arr.push(el)
                         }
                     })
@@ -43,7 +43,6 @@ const List = () => {
             list && setListTickets(list.tickets)
         }
     }, [filter, list])
-
     return (
         <div className={style.main}>
             {list ?
